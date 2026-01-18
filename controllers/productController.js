@@ -5,7 +5,7 @@ const {getProductService,
 
 const getProduct = (req,res)=>{
     const result = getProductService();
-    res.send(result);
+    res.sendFile(result);
 };
 const getProductById = (req,res)=>{
     const id = req.params.id;

@@ -1,5 +1,6 @@
+const path = require("path");
 const getProductService = ()=>{
-    return "Fetching all products";
+    return path.join(__dirname,"..","view","productHtml.html");
 };
 const addProductService = ()=>{
     return "Adding a new product";
