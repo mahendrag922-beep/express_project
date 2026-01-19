@@ -16,7 +16,8 @@ const addProduct = (req,res)=>{
     
     const data = req.body;
     console.log(data.productName);
-    const result =  addProductService(data.productName);
+    const result =  addProductService(data.productName
+    );
     res.send(result);
 };
 
