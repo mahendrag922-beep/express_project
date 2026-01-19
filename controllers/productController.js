@@ -13,7 +13,10 @@ const getProductById = (req,res)=>{
    res.send(result);
 };
 const addProduct = (req,res)=>{
-    const result =  addProductService();
+    
+    const data = req.body;
+    console.log(data.productName);
+    const result =  addProductService(data.productName);
     res.send(result);
 };
 

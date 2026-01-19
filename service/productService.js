@@ -2,8 +2,8 @@ const path = require("path");
 const getProductService = ()=>{
     return path.join(__dirname,"..","view","productHtml.html");
 };
-const addProductService = ()=>{
-    return "Adding a new product";
+const addProductService = (req)=>{
+    return {value : req};
     
 };
 const getProductByIdService = (id)=>{
