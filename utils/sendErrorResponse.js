@@ -5,5 +5,12 @@ const sendErrorResponse = (res,err)=>{
          message : err.message
     });
 };
-
-module.exports = sendErrorResponse;
+const sendResponse = (res,data,statusCode)=>{
+    res.status(statusCode).json({
+        status:"true",
+        data : data,
+        code : statusCode
+    })
+}
+module.exports = {sendErrorResponse,
+                 sendResponse}

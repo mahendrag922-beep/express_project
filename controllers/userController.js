@@ -1,6 +1,6 @@
-const sendErrorResponse = require("../utils/sendErrorResponse");
+const {sendErrorResponse,sendResponse} = require("../utils/sendErrorResponse");
 const getAllUsers = (req,res)=>{
-    res.send("Fetching all user");
+    return sendResponse(res,"Fetching all user",200);
 };
 const addUser=(req,res)=>{
     res.send("Adding a new user");
@@ -14,7 +14,7 @@ const addUser=(req,res)=>{
     throw err;
   }
 
-   res.send(`Fetching user with ID : ${id}`);
+   return sendResponse(res,`Fetching user with ID : ${id}`,200);
 }catch(error){
   return sendErrorResponse(res,error);
 }
